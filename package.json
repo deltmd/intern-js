@@ -25,5 +25,17 @@
     "roots": [
       "test"
     ]
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deltmd/intern-js.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deltmd/intern-js/issues"
+  },
+  "homepage": "https://github.com/deltmd/intern-js#readme"
 }

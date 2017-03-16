@@ -2,7 +2,7 @@ import TwitterConsumer from '../../src/consumers/TwitterConsumer';
 import TwitterFixture from '../fixtures/twitter.json';
 
 describe('TwitterConsumer', () => {
-  xit('should assertQueue with durable', () => {
+  it('should assertQueue with durable', () => {
     const assertQueueMock = jest.fn();
     new TwitterConsumer({
       assertQueue: assertQueueMock,
@@ -12,11 +12,11 @@ describe('TwitterConsumer', () => {
     expect(assertQueueMock).toBeCalledWith('hello', { durable: true });
   });
 
-  
-  xit('should run consume with consumerQueue name on start', () => {
+
+  it('should run consume with consumerQueue name on start', () => {
   });
 
-  xit('should run transform and not publish on failure', () => {
+  it('should run transform and not publish on failure', () => {
     const sendToQueueMock = jest.fn();
     const ackMock = jest.fn();
     const consumer = new TwitterConsumer({
@@ -30,7 +30,7 @@ describe('TwitterConsumer', () => {
     expect(ackMock.mock.calls.length).toBe(0);
   });
 
-  xit('should run transform and not publish on success', () => {
+  it('should run transform and not publish on success', () => {
     const sendToQueueMock = jest.fn();
     const ackMock = jest.fn();
     const consumer = new TwitterConsumer({
