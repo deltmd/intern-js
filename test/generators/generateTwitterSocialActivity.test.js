@@ -15,6 +15,11 @@ describe('generateTwitterSocialActivity', () => {
     expect(activity.BodyText).toEqual('RT @StylishRentals: Love this! \"Modern style Country Villa - Houses for Rent in Almoster\" @airbnb #Travelhttps://t.co/xJ479oYcx9');
   });
 
+  // it('should check if the message has an image attatched to the object. If there is define URL with the URL of the image', () => {
+  //   const activity = generateTwitterSocialActivity(TwitterFixture);
+  //   expect(PostMedia.URL).toEqual('https://pbs.twimg.com/profile_images/746818199753129984/AiUdIFJe_normal.jpg');
+  // });
+
   it('should generate an activity with second fixure json', () => {
     const activity = generateTwitterSocialActivity(TwitterTwoFixture);
     expect(activity.ActivityURL).toEqual('http://twitter.com/JenVento/statuses/794169597222064128');
@@ -28,9 +33,13 @@ describe('generateTwitterSocialActivity', () => {
   });
 
   it('should returned undefined if missing id and body text', () => {
+    const activity = generateTwitterSocialActivity({});
+    expect(activity).toEqual(undefined);
   });
 
   it('should match snapshot on valid activity', () => {
+    const activity = generateTwitterSocialActivity(TwitterFixture);
+    expect(activity).toMatchSnapshot();
   });
 
 });

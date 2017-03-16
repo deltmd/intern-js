@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateTwitterSocialActivity should match snapshot on valid activity 1`] = `
+Object {
+  "ActivityURL": "http://twitter.com/MckeonLutz/statuses/751152691611463680",
+  "AuthorID": "id:twitter.com:1386906962",
+  "AuthorPictureURL": "https://abs.twimg.com/sticky/default_profile_images/default_profile_0_normal.png",
+  "AuthorRealName": "MckeonLutz",
+  "AuthorUsername": "MckeonLutz",
+  "BodyText": "RT @StylishRentals: Love this! \\"Modern style Country Villa - Houses for Rent in Almoster\\" @airbnb #Travelhttps://t.co/xJ479oYcx9",
+  "ID": "tag:search.twitter.com,2005:751152691611463680",
+  "Network": "twitter",
+  "PostMedia": Array [],
+  "Version": "2.0",
+}
+`;

@@ -2,10 +2,10 @@ import _ from 'lodash';
 
 export default function twitterTransformer (message) {
   const PostMedia = [];
-  if (message.images && message.images.standard_resolution) {
+  if (message.image && message.image.standard_resolution) {
     PostMedia.push({
       MediaType: _.get(message, 'type') || 'image',
-      URL: message.images.standard_resolution.url,
+      URL: message.image.standard_resolution.url,
     });
   }
   const socialActivity = {
